@@ -23,9 +23,9 @@ During the final testing stage, it is essential to conduct exploratory tests fro
 
 I prefer Cucumber framework with Selenium WebDriver in Java to ensure your requirements of the automated test solution. Below is an example implementation of the scenario described:
 
-```
-Feature file (inspiration.feature):
 
+**Feature file :**
+```
 Feature: Trending List Followers Check
   As a user
   I want to verify the number of followers for a trending list
@@ -41,7 +41,7 @@ Feature: Trending List Followers Check
 ```
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
 
-**Step Definitions (InspirationSteps.java):**
+**Step Definitions**
 
 ```
 import io.cucumber.java.en.*;
@@ -104,7 +104,7 @@ public class InspirationSteps {
     }
 ```
 
-**Test Runner (TestRunner.java):**
+**Test Runner**
 
 ```
 import io.cucumber.junit.Cucumber;
