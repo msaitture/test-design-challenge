@@ -2,7 +2,7 @@
 
 I can utilize the state transition testing technique. This technique can be employed to test how different users and roles behave within the system and transition.
 
-For instance:
+**For instance:**
 1. Test scenarios related to situations that do not require any specific role will be created.
 2. Positive and negative scenarios regarding administrator login processes will be devised.
 3. Scenarios will be generated concerning actions requiring the successful login of an administrator role.
@@ -16,12 +16,14 @@ For all scenarios, positive and negative scenarios should also be applied from a
 During the final testing stage, it is essential to conduct exploratory tests from a risk assessment standpoint.
 
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 # CHALLENGE #2 - Test Automation Challenge
 
 I prefer Cucumber framework with Selenium WebDriver in Java to ensure your requirements of the automated test solution. Below is an example implementation of the scenario described:
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+```
 Feature file (inspiration.feature):
 
 Feature: Trending List Followers Check
@@ -36,21 +38,30 @@ Feature: Trending List Followers Check
     And I open the "De største bamser" trending list
     Then I should see the number of trending list followers
 
-
+```
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
 
-Step Definitions (InspirationSteps.java):
+**Step Definitions (InspirationSteps.java):**
 
+```
 import io.cucumber.java.en.*;
+
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import static org.junit.Assert.assertEquals;
 
-public class InspirationSteps {
-    WebDriver driver;
 
+
+public class InspirationSteps {    
+    
+    WebDriver driver;
+    
     @Given("I am on the {string} page of {string}")
     public void i_am_on_the_page_of(String page, String url) {
         System.setProperty("webdriver.chrome.driver", "path_to_chromedriver");
@@ -91,12 +102,11 @@ public class InspirationSteps {
         assertEquals(1000, followersCount); // Replace 1000 with the expected count
         driver.quit();
     }
-}
+```
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Test Runner (TestRunner.java):**
 
-Test Runner (TestRunner.java):
-
+```
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -110,30 +120,26 @@ import org.junit.runner.RunWith;
 public class TestRunner {
 }
 
+```
 
+ **Let's break down how each aspect of reliability, readability, maintainability, and usability is ensured in the provided solution:**
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-Let's break down how each aspect of reliability, readability, maintainability, and usability is ensured in the provided solution:
-
-Reliability:
+**Reliability:**
 WebDriver Initialization: The WebDriver is initialized properly at the beginning of the scenario, ensuring that the browser is launched without errors.
 Explicit Waits: Implicit waits are used to ensure that elements are fully loaded before interacting with them, enhancing the reliability of element locating and interaction.
 Assertions: Assertions are used to verify expected outcomes, ensuring that the test fails if the expected condition is not met.
 
-Readability:
+**Readability:**
 Descriptive Step Definitions: Step definitions are written in a human-readable format using Given-When-Then clauses, making it easy to understand the flow of the scenario.
 Meaningful Variable Names: Variable names like linkText, category, brand, and listName are used to make the code self-explanatory.
 Comments: Comments are added where necessary to explain complex logic or provide context for certain actions.
 
-Maintainability:
+**Maintainability:**
 Modular Design: The step definitions are modular, focusing on single actions or assertions, which makes it easier to maintain and update them independently.
 XPath Expressions: XPath expressions for locating elements are used with caution, ensuring that they are robust and easy to update if the structure of the web page changes.
 Separation of Concerns: Concerns like WebDriver setup, step definitions, and test execution are separated into different files, making it easier to manage and update each component.
 
-Usability:
+**Usability:**
 Cucumber Feature File: The scenario is written in a natural language format that can be easily understood by non-technical stakeholders, facilitating collaboration between teams.
 Executable Documentation: The feature file serves as executable documentation, providing a clear understanding of the test scenario and its expected outcomes.
 Error Reporting: Cucumber provides detailed error messages in case of test failures, making it easier to identify and diagnose issues.
