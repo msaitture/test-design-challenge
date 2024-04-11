@@ -41,7 +41,7 @@ Feature: Trending List Followers Check
 ```
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
 
-**Step Definitions**
+**Step Definitions :**
 
 ```
 import io.cucumber.java.en.*;
@@ -104,7 +104,7 @@ public class InspirationSteps {
     }
 ```
 
-**Test Runner**
+**Test Runner :**
 
 ```
 import io.cucumber.junit.Cucumber;
