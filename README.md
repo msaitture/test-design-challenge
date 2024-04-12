@@ -64,7 +64,7 @@ public class InspirationSteps {
     
     @Given("I am on the {string} page of {string}")
     public void i_am_on_the_page_of(String page, String url) {
-        System.setProperty("webdriver.chrome.driver", "path_to_chromedriver");
+       ConfigurationReader.getProperty("Chrome");
         driver = new ChromeDriver();
         driver.get(url);
     }
