@@ -125,23 +125,23 @@ public class TestRunner {
  **Let's break down how each aspect of reliability, readability, maintainability, and usability is ensured in the provided solution:**
 
 **Reliability:**
-WebDriver Initialization: The WebDriver is initialized properly at the beginning of the scenario, ensuring that the browser is launched without errors.
-Explicit Waits: Implicit waits are used to ensure that elements are fully loaded before interacting with them, enhancing the reliability of element locating and interaction.
-Assertions: Assertions are used to verify expected outcomes, ensuring that the test fails if the expected condition is not met.
+The WebDriver is initialized properly at the beginning of the scenario, ensuring that the browser is launched without errors.
+Implicit waits are used to ensure that elements are fully loaded before interacting with them, enhancing the reliability of element locating and interaction.
+Assertions are used to verify expected outcomes, ensuring that the test fails if the expected condition is not met.
 
 **Readability:**
-Descriptive Step Definitions: Step definitions are written in a human-readable format using Given-When-Then clauses, making it easy to understand the flow of the scenario.
-Meaningful Variable Names: Variable names like linkText, category, brand, and listName are used to make the code self-explanatory.
-Comments: Comments are added where necessary to explain complex logic or provide context for certain actions.
+Step definitions are written in a human-readable format using Given-When-Then clauses, making it easy to understand the flow of the scenario.
+Variable names like linkText, category, brand, and listName are used to make the code self-explanatory.
+Comments are added where necessary to explain complex logic or provide context for certain actions.
 
 **Maintainability:**
-Modular Design: The step definitions are modular, focusing on single actions or assertions, which makes it easier to maintain and update them independently.
-XPath Expressions: XPath expressions for locating elements are used with caution, ensuring that they are robust and easy to update if the structure of the web page changes.
-Separation of Concerns: Concerns like WebDriver setup, step definitions, and test execution are separated into different files, making it easier to manage and update each component.
+The step definitions are modular, focusing on single actions or assertions, which makes it easier to maintain and update them independently.
+XPath expressions for locating elements are used with caution, ensuring that they are robust and easy to update if the structure of the web page changes.
+Concerns like WebDriver setup, step definitions, and test execution are separated into different files, making it easier to manage and update each component.
 
 **Usability:**
-Cucumber Feature File: The scenario is written in a natural language format that can be easily understood by non-technical stakeholders, facilitating collaboration between teams.
-Executable Documentation: The feature file serves as executable documentation, providing a clear understanding of the test scenario and its expected outcomes.
-Error Reporting: Cucumber provides detailed error messages in case of test failures, making it easier to identify and diagnose issues.
+The scenario is written in a natural language format that can be easily understood by non-technical stakeholders, facilitating collaboration between teams.
+The feature file serves as executable documentation, providing a clear understanding of the test scenario and its expected outcomes.
+Cucumber provides detailed error messages in case of test failures, making it easier to identify and diagnose issues.
 
 By following these practices, the automated test solution ensures not only that it accurately tests the desired functionality but also that it is easy to understand, maintain, and use by both technical and non-technical team members.
